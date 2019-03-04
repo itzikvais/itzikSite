@@ -65,7 +65,7 @@
 <br/>
 <br/>
 <br/>
- <iframe id="list" width="560" height="315" src="https://www.youtube.com/embed/vYnz40_OgKw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><section id="like" class="section">
+ <iframe id="list" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLCD9mVi9L2hiMVIM3VhdHug9AX8tu8WHZ&index=2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><section id="like" class="section">
 <br/>
 <br/>
 </section>
@@ -89,29 +89,14 @@
 <br/>
 <br/>
  <p class="header">give me a like</p>
+<br />
+ <iframe id="like" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fitzikvais.github.io%2FitzikSite%2F&width=132&layout=button_count&action=like&size=large&show_faces=true&share=true&height=46&appId" width="132" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 <br/>
 <br/>
 <br/>
-
-
 <section id="qrcoder" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
  <p class="header">scan my code</p>
+ <img id="qr" src="http://qr.kaywa.com/?l=1&s=4&d=http%3A%2F%2Fkaywa.me%2FCN2AZ" alt="QRCode"/>
 <br/>
 <br/>
 <br/>
@@ -160,7 +145,29 @@
  <p class="header">contact me</p>
 <br/>
 <br/>
+ <form id="form" action="mailto:yizhakva@post.bgu.ac.il" method="post" enctype="text/plain">  <label>Your Name:</label>
+  <br />
+  <input class="input" type="text" name="name" required>
+  <br />
+  <br />
+  <br />
+  <label>Email Address:</label>
+  <br />
+  <input class="input" type="mail" name="email" required>
+  <br />
+  <br />
+  <br />
+  <label>Message:</label>
+  <br />
+  <textarea name="message" rows="10" cols="50" required></textarea>
+  <br />
+  <br />
+  <br />
+  <input class="formButtons" type="submit" value="Send" >
+  <input class="formButtons" type="reset" value="Reset" >
+ </form>
 <br/>
+ <br/>
 </section>
 
 
@@ -191,7 +198,7 @@ $(function(){
   move(image+1);
  }
  function move(num) {
-   if(num==5)
+   if(num==7)
     num=1;
    else if(num==0)
     num=4;
@@ -199,5 +206,12 @@ $(function(){
   document.getElementById("myImage").src=image;
  }
 </script>
+ <script language="JavaScript">
+  var frmvalidator  = new Validator("contactform");
+  frmvalidator.addValidation("name","req","Please provide your name");
+  frmvalidator.addValidation("email","req","Please provide your email");
+  frmvalidator.addValidation("email","email",
+          "Please enter a valid email address");
+ </script>
 </section>
 </html>
