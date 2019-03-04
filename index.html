@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<img>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<div id="menu">
+  <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png" />
+  <ul>
+ <li><a href="#about">About Me</a></li>
+ <li><a href="#photos">My Photos</a></li>
+ <li><a href="#playlist">My Playlist</a></li>
+ <li><a href="#like">Like</a></li>
+ <li><a href="#qrcoder">QR code</a></li>
+ <li><a href="#spa">Q&A</a></li>
+ <li><a href="#contact">Contact Me</a></li>
+  </ul>
+</div>
+		  
+<section id="about" class="section">
+<br/>
+<br/>
+<br/>
+<br/>
+ <p class="header">about me</p>
+ <p>Luke Skywalker is a fictional character and the main protagonist of the original film trilogy of the Star Wars franchise.
+<br />Luke is a pivotal figure in the Rebel Alliance's struggle against the Galactic Empire, a friend and eventual brother-in-law of smuggler Han Solo, and unknown to him until Return of the Jedi, the twin brother of Rebellion leader Princess Leia.
+  He trains under Jedi Masters Obi-Wan Kenobi and Yoda, and is the son of Anakin Skywalker and Padmé Amidala. He mentors Rey, the protagonist of the sequel trilogy, and is the maternal uncle of Kylo Ren, a major antagonist in the sequel trilogy.
+  <br />
+
+ </p>
+  <br/>
+</section>
+<section id="photos" class="section" >
+
+ <p class="header">my photos</p>
+ <br/>
+ <button onclick="moveLeft()" class="arrow" id="lArrow"  ></button>
+<img id="myImage" src="photos/1.jpeg" >
+ <button onclick="moveRight()" class="arrow" id="rArrow"  ></button>
+
+</section>
+<br/>
+<br/>
+<br/>
+<br/>
+<section id="playlist" class="section">
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+ <p class="header">my playlist</p>
+<br/>
+<br/>
+<br/>
+ <iframe id="list" width="560" height="315" src="https://www.youtube.com/embed/vYnz40_OgKw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><section id="like" class="section">
+<br/>
+<br/>
+</section>
+<br/>
+<br/>
+<br/>
+<br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+<br/>
+<br/>
+ <p class="header">give me a like</p>
+<br/>
+<br/>
+<br/>
+
+
+<section id="qrcoder" class="section">
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+ <p class="header">scan my code</p>
+<br/>
+<br/>
+<br/>
+</section>
+
+<section id="spa" class="section">
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+ <p class="header">ans</p>
+<br/>
+<br/>
+<br/>
+</section>
+
+<section id="contact" class="section">
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+ <p class="header">contact me</p>
+<br/>
+<br/>
+<br/>
+</section>
+
+
+<script type="text/javascript">
+$(function(){
+  $("#nav a").click(function(e){
+    e.preventDefault();
+    $('html,body').scrollTo(this.hash,this.hash); 
+  });
+});
+</script>
+<script type="text/javascript">
+ $(document).scroll(function() {
+    $('#menu').toggle($(this).scrollTop()>1000)
+ });​
+ </script>
+<script>
+ function moveLeft(){
+  var image=document.getElementById("myImage").src;
+  image=image.substr(image.length-6,1);
+  image=Number(image);
+  move(image-1);
+ }
+ function moveRight(){
+  var image=document.getElementById("myImage").src;
+  image=image.substr(image.length-6,1);
+  image=Number(image);
+  move(image+1);
+ }
+ function move(num) {
+   if(num==5)
+    num=1;
+   else if(num==0)
+    num=4;
+   var image= 'photos/'+ num + '.jpeg'
+  document.getElementById("myImage").src=image;
+ }
+</script>
+</section>
+</html>
