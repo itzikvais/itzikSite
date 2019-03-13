@@ -26,13 +26,12 @@
  <p>Luke Skywalker is a fictional character and the main protagonist of the original film trilogy of the Star Wars franchise.
 <br />Luke is a pivotal figure in the Rebel Alliance's struggle against the Galactic Empire, a friend and eventual brother-in-law of smuggler Han Solo, and unknown to him until Return of the Jedi, the twin brother of Rebellion leader Princess Leia.
   He trains under Jedi Masters Obi-Wan Kenobi and Yoda, and is the son of Anakin Skywalker and Padmé Amidala. He mentors Rey, the protagonist of the sequel trilogy, and is the maternal uncle of Kylo Ren, a major antagonist in the sequel trilogy.
-  <br />
 
  </p>
-  <br/>
 </section>
 <section id="photos" class="section" >
-
+ <br />
+ <br/>
  <p class="header">my photos</p>
  <br/>
  <button onclick="moveLeft()" class="arrow" id="lArrow"  ></button>
@@ -90,11 +89,11 @@
 <br/>
  <p class="header">give me a like</p>
 <br />
- <iframe id="like" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fitzikvais.github.io%2FitzikSite%2F&width=132&layout=button_count&action=like&size=large&show_faces=true&share=true&height=46&appId" width="132" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+ <iframe id="mlike" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fitzikvais.github.io%2FitzikSite%2F&width=132&layout=button_count&action=like&size=large&show_faces=true&share=true&height=46&appId" width="132" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 <br/>
+ <section id="qrcoder" class="section">
+ <br/>
 <br/>
-<br/>
-<section id="qrcoder" class="section">
  <p class="header">scan my code</p>
  <img id="qr" src="http://qr.kaywa.com/?l=1&s=4&d=http%3A%2F%2Fkaywa.me%2FCN2AZ" alt="QRCode"/>
 <br/>
@@ -120,28 +119,26 @@
 <br/>
 <br/>
  <p class="header">ans</p>
+ <div id="answers">
 <br/>
+ <p> <b><u>שאלה 1:</u></b></p>
+  <p> ווב 1.0- זוהי גירסת הקריאה של הרשת והמשתמש מקבל את האתרים בצורה סטאטית כפי שהם ללא אפשרות לשינוי בזמן אמת.<br /> בווב 1 לא ניתן להעביר מידע לשרת אלא רק לקבל ממנו ולכן גרסא זו נקראת גרסת ״הקריאה״.</p>
+  <p> ווב 2.0-לעומת ווב 1.0 שזוהי גרסת ״הקריאה״ בווב 2.0 הנקראת גם גרסת ״הכתיבה״ ניתן גם להעביר מידע בין המשתמש לאתר ולא רק בין האתר למשתמש.גרסא זו מעודדת שיתוף פעולה ושיתוף מידע מצד הגולשים.(דוג׳ לאתרים בווב 2.0 פייסבוק יוטיוב וכו׳)</p>
+  <p> ווב 3.0- זוהי גרסת הווב הסמנטי והאינטליגנטי מכיוון שבגרסא זו בוצע מעבר בין דפים שרק האדם יודע להבין לדפים שגם מכונה יודעת להבין. בווב 3.0 ישנם שימוש באפליקציות דינמיות ואינטרקציית ״מכונה למכונה״ ולא רק אדם למכונה כמו בגרסאות שקדמו לה. אחד השימושים העיקריים בווב 3.0 הוא שמחשבים יוכלים לפרש מידע ובכך ליצור בצורה חכמה תוכן שימושי לכל משתמש.</p>
+  <p> <b><u>שאלה 2:</u></b></p>
+  <p>ווב 1.0- המשתמש מקבל אתר ובו מידע על תופעות לוואי של תרופות כאשר באתר מופיע רק תוכן ולינקים לאתרים נוספים שיכולים גם הם לדבר על תופעות לוואי של תמונות</p>
+  <p>ווב 2.0- המשתמש יכול לשלוח שאילתא ולקבל אתרים שבהם קיים מידע על תופעות לוואי של תרופות, בנוסף המשתמש יכול לגשת לאתרים שבהם יוכל לשוחח עם מומחה.</p>
+  <p> ווב 3.0- המשתמש מקבל תשובה מבוססת על פי אלגוריתמים של למידת מכונה לפי שאילתות דומות שנשאלו בעבר. כמו כן, התשובה יכולה להיות יותר ממוקדת למשתמש לפי שאילתות נוספות שהריץ(לדוג׳ תשובה במידה והריץ שאילתא על כדורים נגד דלקות ולאחר מכן תופעות לוואי של תרופות אז השאילתא ככל הנראה תהיה יותר ממוקדת)</p>
 <br/>
+ </div>
 <br/>
 </section>
 
-<section id="contact" class="section">
 <br/>
+
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+ <section id="contact" class="section">
+ <br/>
  <p class="header">contact me</p>
 <br/>
 <br/>
@@ -182,7 +179,7 @@ $(function(){
 <script type="text/javascript">
  $(document).scroll(function() {
     $('#menu').toggle($(this).scrollTop()>1000)
- });​
+ })​;
  </script>
 <script>
  function moveLeft(){

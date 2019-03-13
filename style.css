@@ -8,7 +8,12 @@
 	z-index: 10;
 }
 body{
-	background-color: rgb(255,255,204);
+	background: url("photos/cover.jpg") no-repeat center center fixed;;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: bisque;
 }
 ul {
 	list-style-type: none;
@@ -39,12 +44,12 @@ li a:hover {
 #logo{
 	margin: 0px;
 	position: fixed;
-	height: 45px;
+	height: 48px;
 	width: 55px;
 }
 .header{
 	width: 100%;
-	background-color: #333;
+	background-color: darkred;
 	color:white;
 	text-align: center;
 }
@@ -57,8 +62,12 @@ p{
 	left: 33%;
 	position:  absolute;
 	width:500px;
+	z-index: 2;
 
 
+}
+#myImage:hover{
+	transform: scale(1.2);
 }
 .arrow{
 	height:30px;
@@ -91,6 +100,9 @@ p{
 	position:  absolute;
 	width:500px;
 }
+#qr:hover{
+	transform: scale(2);
+}
 #form{
 	position: absolute;
 	left:40%;
@@ -105,7 +117,11 @@ p{
 	margin: 0px 20px 20px 20px;
 	height: 100px;
 }
-#like{
+#mlike{
 	position: absolute;
 	left: 45%;
+}
+#answers{
+	background-color: #333333;
+	direction: rtl;
 }
